@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "904806357222",
+    "project_id": "logintesttwo-1a4d1",
+    "storage_bucket": "logintesttwo-1a4d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904806357222:android:6523bd14e04245dba5c327",
+        "android_client_info": {
+          "package_name": "com.test.logintesttwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904806357222-1nv3sgutm9vj0n1b2ditooa2l6dnqsu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXaMTgY5tSADmXidrgUl9FEdes9h7okrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904806357222-1nv3sgutm9vj0n1b2ditooa2l6dnqsu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

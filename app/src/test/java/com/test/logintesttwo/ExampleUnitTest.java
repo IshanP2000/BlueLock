@@ -1,4 +1,4 @@
-package com.example.bluelockapp;
+package com.test.logintesttwo;
 
 import org.junit.Test;
 

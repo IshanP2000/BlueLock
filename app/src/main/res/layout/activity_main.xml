@@ -2,17 +2,101 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#4682B4">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:theme="@style/Theme.MyApplication2.AppBarOverlay" />
+
+    <!--
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="156dp"
+        android:layout_height="194dp"
+        app:srcCompat="@drawable/desktop_wallpaper_retro_microphone_vector_icon_illustration_classic_vintage_singing_mic_vector_flat_cartoon_style_suitable_for_web_landing_page_banner_flyer_sticker_background_6779186_vector_art_at_vecteezy_thumbnail"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="481dp" />
+-->
+
+    <ImageButton
+        android:id="@+id/imageView4"
+        android:layout_width="125dp"
+        android:layout_height="195dp"
+        android:adjustViewBounds="false"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268"
+        app:srcCompat="@drawable/istockphoto_1389706712_612x6121" />
+
+    <ImageButton
+        android:id="@+id/imageView5"
+        android:layout_width="125dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="false"
+        android:scaleType="fitCenter"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.497"
+        app:srcCompat="@drawable/istockphoto_1389706712_612x6122" />
+
+    <Button
+        android:id="@+id/History"
+        android:layout_width="112dp"
+        android:layout_height="63dp"
+        android:layout_gravity="start"
+        android:background="#4169"
+        android:enabled="true"
+        android:text="History"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/SignOut"
+        android:layout_width="112dp"
+        android:layout_height="63dp"
+        android:layout_gravity="start"
+        android:background="#4169"
+        android:enabled="true"
+        android:onClick="signout"
+        android:text="Sign Out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.945"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
