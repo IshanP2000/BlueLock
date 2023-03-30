@@ -76,6 +76,7 @@
         android:layout_gravity="start"
         android:background="#4169"
         android:enabled="true"
+        android:onClick="history"
         android:text="History"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -20,5 +20,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_new_login">NewLoginActivity</string>
     <string name="title_activity_new_register">NewRegisterActivity</string>
+    <string name="title_activity_history">NewRegisterActivity</string>
     <string name="prompt_lastname">lastname</string>
 </resources>

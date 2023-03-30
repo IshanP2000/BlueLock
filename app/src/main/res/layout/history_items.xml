@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TableLayout
+
+        android:id="@+id/tableLayout"
+        android:layout_width="409dp"
+
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:stretchColumns="0,1,2">
+
+    <TableRow
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        app:layout_constraintVertical_bias="0.060000002"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="103dp"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:text=" User "
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="103dp"
+            android:layout_height="100dp"
+            android:layout_column="1"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:text="Date / Time"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:id="@+id/tvTask"
+            android:layout_width="103dp"
+            android:layout_height="100dp"
+            android:layout_column="2"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:text="Entry / Exit"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </TableRow>
+    </TableLayout>
+
+</LinearLayout>

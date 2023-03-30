@@ -8,11 +8,21 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import android.widget.Button;
@@ -207,6 +217,21 @@ public class MainActivity extends AppCompatActivity {
         unlock_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("Entered listener event!!!");
+
+                FirebaseDatabase reg_users_database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = reg_users_database.getReference("Registered Users");
+
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+
+                Date currentTime = Calendar.getInstance().getTime();
+
+                String key = myRef.child("History").push().getKey();
+                myRef.child("History").child(key).child("task").setValue("Unlock");
+                myRef.child("History").child(key).child("user").setValue(currentUser.getDisplayName());
+                myRef.child("History").child(key).child("date_time").setValue(currentTime.toString());
+
+                Toast.makeText(MainActivity.this, "Unlocking BlueLock", Toast.LENGTH_SHORT).show();
+
                 (new Thread(new workerThread("Unlock"))).start();
 
             }
@@ -216,6 +241,21 @@ public class MainActivity extends AppCompatActivity {
         lock_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                FirebaseDatabase reg_users_database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = reg_users_database.getReference("Registered Users");
+
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+
+                Date currentTime = Calendar.getInstance().getTime();
+
+                String key = myRef.child("History").push().getKey();
+                System.out.println(key);
+                myRef.child("History").child(key).child("task").setValue("Lock");
+                myRef.child("History").child(key).child("user").setValue(currentUser.getDisplayName());
+                myRef.child("History").child(key).child("date_time").setValue(currentTime.toString());
+
+                Toast.makeText(MainActivity.this, "Locking BlueLock", Toast.LENGTH_SHORT).show();
 
                 (new Thread(new workerThread("Lock"))).start();
 
@@ -295,5 +335,9 @@ public class MainActivity extends AppCompatActivity {
     public void signout(View view) {
         mAuth.signOut();
         startActivity(new Intent(MainActivity.this, LoginActivity.class));
+    }
+
+    public void history(View view){
+        startActivity(new Intent(MainActivity.this, HistoryActivity.class));
     }
 }
